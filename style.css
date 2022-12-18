@@ -1,7 +1,7 @@
 :root{
     --background-color: rgba(17,18,36,1);
     --background-gradient: linear-gradient(155deg, var(--background-color) 14%, rgb(33, 34, 62) 29%, var(--background-color) 50%);
-    --primary: #577fd6;
+    --primary: #5ca5df;
     /* --primary: #2a4489;  #5775fb; */
     --secondary: #fafafb;
     --tertiary: #7fc0fe;
@@ -132,15 +132,22 @@ a:hover{
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-md),7vw,var(--fz-xxl));
     margin: 0;
+    margin-bottom: 10px;
 }
 
 #name {
-    color: #ccdff6;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret 1s step-end infinite;
+    border-right: .1em solid var(--primary); /* The typwriter cursor */
+    color: var(--secondary);
     display: inline-block;
     font-size: clamp(30px, 7vw, 70px);
-    letter-spacing: 2px;
+    letter-spacing: .05em;
     margin: 0;
-    margin-top: 10px;
+    padding: 0 !important;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
 }
 
 #description {
@@ -152,3 +159,17 @@ a:hover{
     max-width: 540px;
     margin-bottom: 45px;
 }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 6.5em }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary); }
+  }
+
+  
