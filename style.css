@@ -1,11 +1,12 @@
 :root{
     --background-color: rgba(17,18,36,1);
     --background-gradient: linear-gradient(155deg, var(--background-color) 14%, rgb(33, 34, 62) 29%, var(--background-color) 50%);
-    --primary: #6c8ac8;
+    --primary: #577fd6;
     /* --primary: #2a4489;  #5775fb; */
     --secondary: #fafafb;
     --tertiary: #7fc0fe;
     --slate: #8892b0;
+    --hover-color: rgba(108, 138, 200, .15);
     --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     --fz-xxs: 12px;
@@ -17,7 +18,7 @@
     --fz-xxl: 22px;
     --navbar-height: 75px;
     --navy-shadow:  rgba(2,12,27,0.7);
-    --white-glow: 0px 0px 5px rgba(61,123,259,31);
+    --white-glow: 0px 0px 3px rgba(61,123,259,31);
     --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
 }
 
@@ -25,6 +26,7 @@ body {
     background: var(--background-gradient);
     font-family: var(--font-sans);
     font-size: var(--fz-md);
+    letter-spacing: 1px;
     line-height: 1.3;
     margin: 0px;
     padding: 0px;
@@ -73,6 +75,10 @@ a {
     text-decoration: none;
 }
 
+a:hover{
+    color: var(--primary);
+}
+
 .primary-colored {
     color: var(--primary);
     text-shadow: var(--white-glow);
@@ -98,7 +104,7 @@ a {
 }
 
 .primary-button:hover{
-    background-color: rgba(108, 138, 200, .15);
+    background-color: var(--hover-color);
 }
 
 #contact {
@@ -132,6 +138,7 @@ a {
     color: #ccdff6;
     display: inline-block;
     font-size: clamp(30px, 7vw, 70px);
+    letter-spacing: 2px;
     margin: 0;
     margin-top: 10px;
 }
@@ -140,6 +147,7 @@ a {
     color: var(--slate);
     font-size: var(--fz-lg);
     font-weight: 200px;
-    letter-spacing: 1px;;
+    letter-spacing: 1px;
+    line-height: 1.5;
     max-width: 540px;
 }
