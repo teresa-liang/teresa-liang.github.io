@@ -18,7 +18,7 @@
     --fz-xxl: 22px;
     --navbar-height: 75px;
     --navy-shadow:  rgba(2,12,27,0.7);
-    --white-glow: 0px 0px 3px rgba(61,123,259,31);
+    --white-glow: 0px 0px 2.5px rgba(61,123,259,31);
     --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
 }
 
@@ -93,7 +93,7 @@ a:hover{
     background-color: rgba(0,0,0,0);
     border: 2px var(--primary) solid;
     border-radius: 5px;
-    box-shadow: 0 0 6px .5px var(--primary);
+    box-shadow: 0 0 4px .5px var(--primary);
     color: var(--primary);
     cursor: pointer;
     font-family: var(--font-mono);
@@ -150,4 +150,5 @@ a:hover{
     letter-spacing: 1px;
     line-height: 1.5;
     max-width: 540px;
+    margin-bottom: 45px;
 }
