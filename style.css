@@ -1,7 +1,19 @@
+:root{
+    --default-background-color: linear-gradient(175deg, rgba(28,28,39,1) 78%, rgba(40,41,61,1) 98%);
+    --primary: #3d7bfa;
+    /* --primary: #2a4489;  #5775fb; */
+    --secondary: #7fc0fe;
+    --tertiary: #a5b0d1;
+    --navbar-height: 75px;
+    --navy-shadow:  rgba(2,12,27,0.7);
+    --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
+}
+
 body {
-    background-color: #0a192f;
+    background: var(--default-background-color);
     font-family: Consolas;
-    padding: 40px;
+    padding: 0px;
+    margin: 0px;
 }
 
 p {
@@ -16,10 +28,22 @@ h1 {
     margin: 0px;
 }
 
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: fixed;
+    top: 0;
+    transition: var(--transition);
+    /* backdrop-filter: blur(5px); */
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--default-background-color);
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
+}
+
 nav {
-    float: right;
-    border-width: 10px;
-    border-color: white;
+    margin: 30px;
 }
 
 nav a {
@@ -30,16 +54,13 @@ a {
     text-decoration: none;
 }
 
-.colored {
-    color: #63d6cd;
+.primary-colored {
+    color: var(--primary);
+    text-shadow: 0px 0px 5px rgba(61,123,259,31);
 }
 
-.defaultcolor {
-    color: #a5b0d1;
-}
-
-.textcolor{
-    color:white;
+.secondary-colored {
+    color: var(--tertiary);
 }
 
 .contactimg {
@@ -48,4 +69,22 @@ a {
 
 #name {
     color: #ccdff6; 
+}
+
+.section {
+    margin-top: var(--navbar-height);
+    margin: 150px;
+    min-height: 100vh;
+}
+
+#intro {
+    align-items: center;
+    justify-content: center;
+}
+
+#contact{
+    position: fixed;
+    width: 100px;
+    bottom: 0;
+    border: 2px white solid;
 }
