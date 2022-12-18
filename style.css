@@ -1,19 +1,36 @@
 :root{
-    --default-background-color: linear-gradient(175deg, rgba(28,28,39,1) 78%, rgba(40,41,61,1) 98%);
-    --primary: #3d7bfa;
+    --background-color: rgba(17,18,36,1);
+    --background-gradient: linear-gradient(155deg, var(--background-color) 14%, rgb(33, 34, 62) 29%, var(--background-color) 50%);
+    --primary: #6c8ac8;
     /* --primary: #2a4489;  #5775fb; */
     --secondary: #7fc0fe;
-    --tertiary: #a5b0d1;
+    --tertiary: #fafafb;
+    --slate: #8892b0;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
     --navbar-height: 75px;
     --navy-shadow:  rgba(2,12,27,0.7);
     --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
 }
 
 body {
-    background: var(--default-background-color);
-    font-family: Consolas;
-    padding: 0px;
+    background: var(--background-gradient);
+    font-family: var(--font-sans);
+    line-height: 1.3;
     margin: 0px;
+    padding: 0px;
+}
+
+div {
+    margin: 0;
+    padding: 0;
 }
 
 p {
@@ -24,22 +41,22 @@ p {
 
 h1 {
     font-size: 50px;
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
 }
 
 #navbar {
-    display: flex;
     align-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px -10px var(--navy-shadow);
+    display: flex;
+    font-family: var(--font-mono);
+    height: var(--navbar-height);
     justify-content: right;
     position: fixed;
     top: 0;
     transition: var(--transition);
-    /* backdrop-filter: blur(5px); */
     width: 100%;
-    height: var(--navbar-height);
-    background: var(--default-background-color);
-    box-shadow: 0 10px 30px -10px var(--navy-shadow);
 }
 
 nav {
@@ -61,6 +78,7 @@ a {
 
 .secondary-colored {
     color: var(--tertiary);
+    text-shadow: 0px 0px 5px rgba(61,123,259,31);
 }
 
 .contactimg {
@@ -68,23 +86,41 @@ a {
 }
 
 #name {
-    color: #ccdff6; 
+    color: #ccdff6;
+    display: inline-block;
+    font-size: clamp(30px, 7vw, 70px);
+    margin: 0;
+    margin-top: 10px;
 }
 
 .section {
     margin-top: var(--navbar-height);
-    margin: 150px;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 #intro {
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    padding: 10%;
 }
 
-#contact{
+#contact {
+    border: 2px white solid;
+    bottom: 0;
     position: fixed;
     width: 100px;
-    bottom: 0;
-    border: 2px white solid;
+}
+
+#description {
+    color: var(--slate);
+    font-size: var(--fz-lg);
+    font-weight: 200px;
+    max-width: 540px;
+}
+
+#intro-line {
+    font-family: var(--font-mono);
+    font-size: clamp(var(--fz-md),5vw,var(--fz-lg));
+    margin: 0;
 }
