@@ -1,12 +1,20 @@
 :root{
     --background-color: rgba(17,18,36,1);
-    --background-gradient: linear-gradient(155deg, rgba(28,30,68,1) 14%, rgba(46,48,111,1) 41%, rgba(43,45,105,1) 55%, rgba(30,32,73,11));
+    --background-gradient: linear-gradient(155deg, rgba(1,2,10,1) 0%, rgba(35,35,55,1) 12%, rgba(44,44,73,1) 49%, rgba(26,28,55,1) 94%, rgba(7,7,18,1) 99%);
     --primary: #bde1fe;
-    /* --primary: #2a4489;  #5775fb; */
     --secondary: #fafafb;
     --tertiary: #7fc0fe;
     --slate: #8892b0;
     --hover-color: rgba(108, 138, 200, .15);
+    --navy-shadow:  rgba(2,12,27,0.7);
+    --code-background: #1e1e1e;
+    --code-blue: #3489d3;
+    --code-light-blue: #80cfe1;
+    --code-green: #46b789;
+    --code-yellow: #d7cf85;
+    --code-yellow-orange: #ebb011;
+    --code-orange: #bd8058;
+    --code-white: white;
     --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     --fz-xxs: 12px;
@@ -17,7 +25,7 @@
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --navbar-height: 75px;
-    --navy-shadow:  rgba(2,12,27,0.7);
+    --navy-box-shadow: 0 10px 30px -10px var(--navy-shadow);
     --white-glow: 0px 0px 5px rgba(29,99,163,31);
     --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
 }
@@ -52,7 +60,7 @@ h1 {
 #navbar {
     align-items: center;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px -10px var(--navy-shadow);
+    box-shadow: var(--navy-box-shadow);
     display: flex;
     font-family: var(--font-mono);
     height: var(--navbar-height);
@@ -206,4 +214,76 @@ ul {
     50% { border-color: var(--primary); }
   }
 
+  /* css styling for the intro section */
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10% 15%;
+  }
+
+  #about-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  #headshot{
+    border-radius: 10px;
+    box-shadow: var(--navy-box-shadow);
+    min-height: 50px;
+    max-height: 275px;
+    margin: 25px;
+    object-fit: contain;
+  }
   
+  /* colors for code section */
+  .code-block {
+    background-color: var(--code-background);
+    border-radius: 10px;
+    border-top: 27.5px solid #e5e5e5;
+    box-shadow: var(--navy-box-shadow);
+    font-family: 'Consolas';
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.8;
+    margin: 15px;
+    max-height: 310px;
+    overflow-y: auto;
+    padding: 30px 50px;
+    width: 40%;
+  }
+
+  .code-block span {
+    margin: 0;
+    padding: 0;
+  }
+
+  .code-blue {
+    color: var(--code-blue);
+  }
+
+  .code-light-blue {
+    color: var(--code-light-blue);
+  }
+
+  .code-green {
+    color: var(--code-green);
+  }
+
+  .code-yellow {
+    color: var(--code-yellow);
+  }
+
+  .code-yellow-orange {
+    color: var(--code-yellow-orange);
+  }
+
+  .code-orange {
+    color: var(--code-orange);
+  }
+
+  .code-white {
+    color: var(--code-white);
+  }
