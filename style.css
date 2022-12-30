@@ -214,7 +214,7 @@ ul {
     50% { border-color: var(--primary); }
   }
 
-  /* css styling for the intro section */
+  /* css styling for the about section */
   #about {
     display: flex;
     flex-direction: column;
