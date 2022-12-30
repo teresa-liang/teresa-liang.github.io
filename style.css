@@ -1,12 +1,12 @@
 :root{
-    --background-color: rgba(17,18,36,1);
+    --background-color: #ffffff;
     --background-gradient: linear-gradient(155deg, rgba(1,2,10,1) 0%, rgba(35,35,55,1) 12%, rgba(44,44,73,1) 49%, rgba(26,28,55,1) 94%, rgba(7,7,18,1) 99%);
-    --primary: #bde1fe;
-    --secondary: #fafafb;
-    --tertiary: #7fc0fe;
-    --slate: #8892b0;
-    --hover-color: rgba(108, 138, 200, .15);
-    --navy-shadow:  rgba(2,12,27,0.7);
+    --primary: #afcd92;
+    --secondary: #3a3b35;
+    --tertiary: #96a98d;
+    --quaternary: #927e77;
+    --hover-color: rgba(175, 205, 146, .75);
+    --navy-shadow:  rgba(2, 12, 27, 0.025);
     --code-background: #1e1e1e;
     --code-blue: #3489d3;
     --code-light-blue: #80cfe1;
@@ -15,8 +15,8 @@
     --code-yellow-orange: #ebb011;
     --code-orange: #bd8058;
     --code-white: white;
-    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
-    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-mono: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     --fz-xxs: 12px;
     --fz-xs: 13px;
     --fz-sm: 14px;
@@ -26,12 +26,11 @@
     --fz-xxl: 22px;
     --navbar-height: 75px;
     --navy-box-shadow: 0 10px 30px -10px var(--navy-shadow);
-    --white-glow: 0px 0px 5px rgba(29,99,163,31);
     --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
 }
 
 body {
-    background: var(--background-gradient);
+    background: var(--background-color);
     font-family: var(--font-sans);
     font-size: var(--fz-md);
     letter-spacing: 1px;
@@ -60,9 +59,10 @@ h1 {
 #navbar {
     align-items: center;
     backdrop-filter: blur(10px);
-    box-shadow: var(--navy-box-shadow);
+    background-color: rgba(255, 255, 255, .9);
     display: flex;
     font-family: var(--font-mono);
+    font-weight: 600;
     height: var(--navbar-height);
     justify-content: right;
     position: fixed;
@@ -84,19 +84,18 @@ a {
 }
 
 a:hover{
-    color: var(--primary);
+    color: var(--hover-color);
 }
 
 svg, ul a i {
-    color: var(--slate);
+    color: var(--quaternary);
     height: 25px;
     width: 25px;
 }
 
 svg:hover, ul a i:hover {
-    color: var(--primary);
+    color: var(--hover-color);
     padding-bottom: 5px;
-    text-shadow: var(--white-glow);
 }
 
 ul {
@@ -105,26 +104,23 @@ ul {
 
 .primary-colored {
     color: var(--primary);
-    text-shadow: var(--white-glow);
 }
 
 .secondary-colored {
     color: var(--secondary);
-    text-shadow: var(--white-glow);
 }
 
 .primary-button {
-    background-color: rgba(0,0,0,0);
-    border: 2px var(--primary) solid;
+    background-color: var(--primary);
     border-radius: 5px;
-    box-shadow: 0 0 4px .5px var(--primary);
-    color: var(--primary);
+    border-width: 0;
+    box-shadow: 0 0 .5px .5px var(--primary);
+    color: var(--background-color);
     cursor: pointer;
     font-family: var(--font-mono);
     font-size: var(--fz-md);
     font-weight: 600;
-    padding: 7.5px 17.5px;
-    text-shadow: var(--white-glow);
+    padding: 10px 17.5px;
 }
 
 .primary-button:hover{
@@ -153,7 +149,7 @@ ul {
     height: 100px;
     margin: 0px auto;
     margin-top: 30px;
-    background-color: var(--slate);
+    background-color: var(--quaternary);
 }
 
 .section {
@@ -193,7 +189,7 @@ ul {
 }
 
 #description {
-    color: var(--slate);
+    color: var(--quaternary);
     font-size: var(--fz-lg);
     font-weight: 200px;
     letter-spacing: 1px;
