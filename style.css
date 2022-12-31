@@ -1,12 +1,12 @@
-:root{
+:root {
     --background-color: #ffffff;
-    --background-gradient: linear-gradient(155deg, rgba(1,2,10,1) 0%, rgba(35,35,55,1) 12%, rgba(44,44,73,1) 49%, rgba(26,28,55,1) 94%, rgba(7,7,18,1) 99%);
+    --background-gradient: linear-gradient(155deg, rgba(1, 2, 10, 1) 0%, rgba(35, 35, 55, 1) 12%, rgba(44, 44, 73, 1) 49%, rgba(26, 28, 55, 1) 94%, rgba(7, 7, 18, 1) 99%);
     --primary: #afcd92;
     --secondary: #3a3b35;
     --tertiary: #96a98d;
     --quaternary: #927e77;
     --hover-color: rgba(175, 205, 146, .75);
-    --navy-shadow:  rgba(2, 12, 27, 0.025);
+    --navy-shadow: rgba(2, 12, 27, 0.721);
     --code-background: #1e1e1e;
     --code-blue: #3489d3;
     --code-light-blue: #80cfe1;
@@ -26,7 +26,7 @@
     --fz-xxl: 22px;
     --navbar-height: 75px;
     --navy-box-shadow: 0 10px 30px -10px var(--navy-shadow);
-    --transition: all 0.25 scubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25 scubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 body {
@@ -83,17 +83,19 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     color: var(--hover-color);
 }
 
-svg, ul a i {
+svg,
+ul a i {
     color: var(--quaternary);
     height: 25px;
     width: 25px;
 }
 
-svg:hover, ul a i:hover {
+svg:hover,
+ul a i:hover {
     color: var(--hover-color);
     padding-bottom: 5px;
 }
@@ -123,7 +125,7 @@ ul {
     padding: 10px 17.5px;
 }
 
-.primary-button:hover{
+.primary-button:hover {
     background-color: var(--hover-color);
 }
 
@@ -142,7 +144,7 @@ ul {
 
 }
 
-#contact ul::after{
+#contact ul::after {
     content: "";
     display: block;
     width: 1.5px;
@@ -168,24 +170,27 @@ ul {
 
 #intro-line {
     font-family: var(--font-mono);
-    font-size: clamp(var(--fz-md),7vw,var(--fz-xxl));
+    font-size: clamp(var(--fz-md), 7vw, var(--fz-xxl));
     margin: 0;
     margin-bottom: 10px;
 }
 
 #name {
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret 1s step-end infinite;
-    border-right: .1em solid var(--primary); /* The typwriter cursor */
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret 1s step-end infinite;
+    border-right: .1em solid var(--primary);
+    /* The typwriter cursor */
     color: var(--secondary);
     display: inline-block;
     font-size: clamp(30px, 7vw, 70px);
     letter-spacing: .05em;
     margin: 0;
     padding: 0 !important;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
 }
 
 #description {
@@ -198,44 +203,56 @@ ul {
     margin-bottom: 45px;
 }
 
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 6.5em }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--primary); }
-  }
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
 
-  /* css styling for the about section */
-  #about {
+    to {
+        width: 6.5em
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--primary);
+    }
+}
+
+/* css styling for the about section */
+#about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10% 15%;
-  }
+    padding: 7.5% 15%;
+}
 
-  #about-content {
+#about-content {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-  }
+}
 
-  #headshot{
-    border-radius: 10px;
+#headshot {
+    border-radius: 7.5px;
     box-shadow: var(--navy-box-shadow);
-    min-height: 50px;
     max-height: 275px;
     margin: 25px;
     object-fit: contain;
-  }
-  
-  /* colors for code section */
-  .code-block {
+}
+
+
+/* colors for code section */
+.code-block {
     background-color: var(--code-background);
     border-radius: 10px;
     border-top: 27.5px solid #e5e5e5;
@@ -245,51 +262,51 @@ ul {
     letter-spacing: 0;
     line-height: 1.8;
     margin: 15px;
-    max-height: 310px;
+    max-height: 340px;
     overflow-y: auto;
     padding: 30px 50px;
     width: 40%;
-  }
+}
 
-  .code-block span {
+.code-block span {
     margin: 0;
     padding: 0;
-  }
+}
 
-  .code-blue {
+.code-blue {
     color: var(--code-blue);
-  }
+}
 
-  .code-light-blue {
+.code-light-blue {
     color: var(--code-light-blue);
-  }
+}
 
-  .code-green {
+.code-green {
     color: var(--code-green);
-  }
+}
 
-  .code-yellow {
+.code-yellow {
     color: var(--code-yellow);
-  }
+}
 
-  .code-yellow-orange {
+.code-yellow-orange {
     color: var(--code-yellow-orange);
-  }
+}
 
-  .code-orange {
+.code-orange {
     color: var(--code-orange);
-  }
+}
 
-  .code-white {
+.code-white {
     color: var(--code-white);
-  }
+}
 
 /* css styling for the education section */
 #education {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10% 15%;
+    padding: 7.5% 15%;
 }
 
 #uci-seal {
@@ -301,10 +318,10 @@ ul {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+}
+
+/* Style the buttons inside the tab */
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -313,22 +330,22 @@ ul {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .tab button:hover {
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
     background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .tab button.active {
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
     background-color: #ccc;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
+}
+
+/* Style the tab content */
+.tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
-  }
+}
