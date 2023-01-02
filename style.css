@@ -1,11 +1,17 @@
 :root {
     --background-color: #ffffff;
     --background-gradient: linear-gradient(155deg, rgba(1, 2, 10, 1) 0%, rgba(35, 35, 55, 1) 12%, rgba(44, 44, 73, 1) 49%, rgba(26, 28, 55, 1) 94%, rgba(7, 7, 18, 1) 99%);
-    --primary: #afcd92;
+    --primary: #afcd92; 
     --secondary: #3a3b35;
-    --tertiary: #96a98d;
+    --tertiary: #688778;
     --quaternary: #927e77;
-    --hover-color: rgba(175, 205, 146, .75);
+    --light-grey: #e5e5e5;
+    --light-green: #eef3ef;
+    --dark-green: #4d6c5c;
+    --matcha-grey: #bac2b8;
+    --faded-grey: #b2b2af;
+    --beige: #f7eeef;
+    --hover-color: #c6dbb3;
     --navy-shadow: rgba(2, 12, 27, 0.721);
     --code-background: #1e1e1e;
     --code-blue: #3489d3;
@@ -25,7 +31,7 @@
     --fz-xl: 20px;
     --fz-xxl: 22px;
     --navbar-height: 75px;
-    --navy-box-shadow: 0 10px 30px -10px var(--navy-shadow);
+    --navy-box-shadow: 0 5px 20px -10px var(--navy-shadow);
     --transition: all 0.25 scubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -51,9 +57,17 @@ p {
 }
 
 h1 {
+    color: var(--primary);
     font-size: 50px;
     margin: 0px;
-    padding: 0px;
+    padding: 5px;
+}
+
+h2, h3, h4, h5 {
+    color: var(--secondary);
+    margin: 0;
+    padding: 7.5px;
+
 }
 
 #navbar {
@@ -87,15 +101,13 @@ a:hover {
     color: var(--hover-color);
 }
 
-svg,
-ul a i {
+.contact-icon {
     color: var(--quaternary);
     height: 25px;
     width: 25px;
 }
 
-svg:hover,
-ul a i:hover {
+.contact-icon:hover {
     color: var(--hover-color);
     padding-bottom: 5px;
 }
@@ -112,10 +124,18 @@ ul {
     color: var(--secondary);
 }
 
+.tertiary-colored {
+    color: var(--tertiary);
+}
+
+.quaternary-colored {
+    color: var(--quaternary);
+}
+
 .primary-button {
     background-color: var(--primary);
+    border: none;
     border-radius: 5px;
-    border-width: 0;
     box-shadow: 0 0 .5px .5px var(--primary);
     color: var(--background-color);
     cursor: pointer;
@@ -158,6 +178,37 @@ ul {
     margin-top: var(--navbar-height);
     min-height: 90vh;
 }
+
+.section-content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* css styling for scrollbar */
+/* width */
+::-webkit-scrollbar {
+    height: 7.5px;
+    width: 7.5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: var(--background-color);
+    border-radius: 3px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--matcha-grey);
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--tertiary); 
+  }
 
 /* css styling for the intro section */
 
@@ -235,13 +286,6 @@ ul {
     padding: 7.5% 15%;
 }
 
-#about-content {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 #headshot {
     border-radius: 7.5px;
     box-shadow: var(--navy-box-shadow);
@@ -255,13 +299,13 @@ ul {
 .code-block {
     background-color: var(--code-background);
     border-radius: 10px;
-    border-top: 27.5px solid #e5e5e5;
+    border-top: 27.5px solid var(--light-grey);
     box-shadow: var(--navy-box-shadow);
     font-family: 'Consolas';
     font-size: 14px;
     letter-spacing: 0;
     line-height: 1.8;
-    margin: 15px;
+    margin: 25px;
     max-height: 340px;
     overflow-y: auto;
     padding: 30px 50px;
@@ -309,43 +353,134 @@ ul {
     padding: 7.5% 15%;
 }
 
-#uci-seal {
-    width: 150px;
+#uci-name {
+    color: var(--tertiary);
+    margin: 0;
+}
+
+#uci-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px;
+    text-align: center;
+}
+
+#uci-anteater {
+    transform: scaleX(-1);
+    width: 250px;
+}
+
+#courses {
+    border-radius: 10px;
+    box-shadow: var(--navy-box-shadow);
+    height: 60vh;
+    margin: 25px;
+    max-height: 400px;
+    width: 70%;
 }
 
 /* Style the tab */
 .tab {
+    background-color: var(--primary);
+    border-radius: 10px 10px 0 0;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
     background-color: inherit;
+    color: var(--background-color);
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 14px 25px;
     transition: 0.3s;
     font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    background-color: var(--hover-color);
+    color: var(--tertiary);
+    font-weight: 600;
 }
 
 /* Create an active/current tablink class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: var(--hover-color);
+    text-shadow: 0 5px 20px -10px white;
+    color: var(--tertiary);
+    font-weight: 600;
 }
 
 /* Style the tab content */
 .tabcontent {
+    color: var(--secondary);
     display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+    height: 75%;
+    margin: 5px;
+    overflow-y: auto;
+    padding: 20px 50px;
+}
+
+.tabcontent li {
+    align-items: center;
+    display: flex;
+    padding: 5px;
+}
+
+.tabcontent li div{
+    font-size: var(--fz-xs);
+}
+
+.tabcontent h4 {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+    font-size: var(--fz-sm);
+    margin: 5px 0 0 0;
+    padding: 5px 15px;
+}
+
+.tabcontent ul {
+    margin: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.current-course {
+    color: var(--tertiary);
+    font-weight: 600;
+}
+
+.detail-on-right{
+    font-size: 11px;
+    height: 15px;
+    margin-top: 0;
+    padding: 5px;
+    width: 97.5%;
+}
+
+.detail-on-right div {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.bullet-point {
+    color: var(--tertiary);
+    height: 12px;
+    margin-right: 5px;
+    width: 12px;
+}
+
+.school-name {
+    background-color: var(--beige);
+    border-radius: 2px;
+    color: var(--quaternary);
+    margin: 0;
+    padding: 5px;
+    text-align: center;
 }
