@@ -110,6 +110,7 @@ a:hover {
 .contact-icon:hover {
     color: var(--hover-color);
     padding-bottom: 5px;
+    transition: .1s 0s;
 }
 
 ul {
@@ -483,4 +484,112 @@ ul {
     margin: 0;
     padding: 5px;
     text-align: center;
+}
+
+/* css styling for the experience section */
+#experience {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7.5% 15%;
+}
+
+/* css styling for the experience section */
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7.5% 15%;
+}
+
+#project-content ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    border-radius: 15px;
+    box-shadow: 1px 2.5px 8px -2.5px var(--faded-grey);
+    height: 250px;
+    padding: 25px;
+    position: relative;
+    transition: .5s;
+    width: 215px;
+}
+
+.project-card:hover {
+    background-color: var(--light-green);
+    cursor: pointer;
+}
+
+#project-content ul li {
+    height: 300px;
+    padding: 25px;
+}
+
+#project-content ul li:hover {
+    padding-top: 15px;
+    padding-bottom: 35px; 
+}
+
+.project-card-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+}
+
+.project-card-header svg {
+    color: var(--tertiary);
+    margin: 0;
+    width: 30px;
+}
+
+.external-links svg {
+    color: var(--quaternary);
+    margin: 2.5px;
+    height: 15px;
+    width: 15px;
+    z-index: 2;
+}
+
+.external-links svg:hover {
+    color: var(--dark-green);
+}
+
+.project-card-title {
+    color: var(--secondary);
+    font-size: var(--fz-lg);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.project-card-description {
+    color: var(--quaternary);
+    font-size: var(--fz-xs);
+    margin: 10px 0;
+}
+
+.project-card-footer {
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 15px 0 30px 0;
+    overflow: visible;
+    position: absolute;
+}
+
+.project-card-language {
+    background-color: var(--light-green);
+    border-radius: 5px;
+    color: var(--dark-green);
+    font-size: var(--fz-xxs);
+    font-weight: 500;
+    margin: 5px;
+    padding: 5px 10px;
 }
