@@ -516,7 +516,7 @@ ul {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    margin: 50px;
+    margin: 0 90px 0 50px;
     width: 90%;
 }
 
