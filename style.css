@@ -1,7 +1,7 @@
 :root {
     --background-color: #ffffff;
     --background-gradient: linear-gradient(155deg, rgba(1, 2, 10, 1) 0%, rgba(35, 35, 55, 1) 12%, rgba(44, 44, 73, 1) 49%, rgba(26, 28, 55, 1) 94%, rgba(7, 7, 18, 1) 99%);
-    --primary: #afcd92;
+    --primary: #b3cba8;
     --secondary: #3a3b35;
     --tertiary: #688778;
     --quaternary: #927e77;
