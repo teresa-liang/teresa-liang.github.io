@@ -387,6 +387,22 @@
     </div>
 
     <script>
+        // Function to handle smooth scroll behavior when clicking links within <nav>
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth' // Add smooth scrolling behavior
+                    });
+                }
+            });
+        });
+
         document.getElementsByClassName('default-focus').focus();
         function openTab(evt, id) {
             var i, tabcontent, tablinks;
