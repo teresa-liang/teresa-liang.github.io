@@ -86,6 +86,7 @@ h5 {
     top: 0;
     transition: var(--transition);
     width: 100%;
+    z-index: 2;
 }
 
 nav {
