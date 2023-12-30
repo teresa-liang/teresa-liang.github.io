@@ -241,13 +241,24 @@ ul {
 
 
 /* Style the tab content */
+.default-focus {
+    display: block;
+    opacity: 1;
+    position: relative;
+    transform: translateY(0px);
+    transition: opacity 0.5s ease-in, transform 0.8s ease-in-out;
+}
+
 .tabcontent {
     color: var(--secondary);
-    display: none;
     height: 75%;
     margin: 5px;
     overflow-y: auto;
     padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .tabcontent li, .verticaltabcontent li {
@@ -295,11 +306,14 @@ ul {
 /* Style the tab content */
 .verticaltabcontent {
     color: var(--secondary);
-    display: none;
     height: 87.5%;
     margin: 5px;
     overflow-y: auto;
     padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 

@@ -159,7 +159,7 @@
                         <button class="tablinks" onclick="openTab(event, 'ku')">KU</button>
                         <button class="tablinks" onclick="openTab(event, 'srjc')">SRJC</button>
                     </div>
-                    <div id="uci" class="tabcontent default-focus" style="display: block;">
+                    <div id="uci" class="tabcontent default-focus" style="display: block; opacity: 1; position: relative;">
                         <h3 class="school-name">University of California, Irvine</h3>
                             <h5 class="range">September 2021 - present</h5>
                         <div>
@@ -283,7 +283,7 @@
                         <button class="verticaltablinks" 
                             onclick="openVerticalTab(event, 'UC-Irvine')">UC Irvine</button>
                     </div>
-                    <div id="General-Motors" class="verticaltabcontent default-focus" style="display: block;">
+                    <div id="General-Motors" class="verticaltabcontent default-focus" style="display: block; opacity: 1; position: relative;">
                         <h3>Software Engineering Intern <a target="_blank" href="https://www.gm.com/" class="tertiary-colored">@ General Motors</a></h3>
                         <h5 class="range">June 2023 - September 2023</h5>
                         <ul>
@@ -403,33 +403,54 @@
             });
         });
 
-        document.getElementsByClassName('default-focus').focus();
+        var defaultFocusElement = document.getElementsByClassName('default-focus');
+        defaultFocusElement.focus();
+
         function openTab(evt, id) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
+
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].style.position = "absolute";
+                tabcontent[i].style.opacity = "0";
+                tabcontent[i].style.transform = "translateY(-3px)";
             }
+
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                tablinks[i].classList.remove("active");
             }
-            document.getElementById(id).style.display = "block";
-            evt.currentTarget.className += " active";
+
+            var selectedTab = document.getElementById(id);
+            selectedTab.style.position = "relative";
+            selectedTab.style.display = "block";
+            selectedTab.style.opacity = "1";
+            selectedTab.style.transform = "translateY(0px)";
+            selectedTab.style.transition = "opacity 0.5s ease-in, transform 0.8s ease-in-out";
+            
+            evt.currentTarget.classList.add("active");
         }
 
         function openVerticalTab(evt, id) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("verticaltabcontent");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].style.position = "absolute";
+                tabcontent[i].style.opacity = "0";
+                tabcontent[i].style.transform = "translateY(-3px)";
             }
             tablinks = document.getElementsByClassName("verticaltablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(id).style.display = "block";
-            evt.currentTarget.className += " active";
+            var selectedTab = document.getElementById(id);
+            selectedTab.style.position = "relative";
+            selectedTab.style.display = "block";
+            selectedTab.style.opacity = "1";
+            selectedTab.style.transform = "translateY(0px)";
+            selectedTab.style.transition = "opacity 0.5s ease-in, transform 0.8s ease-in-out";
+            
+            evt.currentTarget.classList.add("active");
         }
     </script>
 </body>
