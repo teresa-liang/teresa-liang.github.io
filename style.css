@@ -433,7 +433,7 @@ ul {
     border-radius: 10px;
     border-top: 27.5px solid var(--light-grey);
     box-shadow: var(--navy-box-shadow);
-    font-family: 'Consolas';
+    font-family: -apple-system, BlinkMacSystemFont, 'Consolas';
     font-size: 14px;
     letter-spacing: 0;
     line-height: 1.8;
