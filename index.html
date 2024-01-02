@@ -2,6 +2,7 @@
 <head>
     <title>Teresa's Website</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="js/customComponents.js"></script>
@@ -64,8 +65,7 @@
                 </p>
             </div>
             <div>
-                <a href="mailto:teresaliang2003@gmail.com"><button type="button" class="primary-button"
-                        style="align-items: center; display: flex; justify-content:center;">
+                <a href="mailto:teresaliang2003@gmail.com"><button type="button" class="primary-button" id="email-btn">
                         <span><i class="material-icons" style="margin-right: 7.5px;">mail</i></span>Say hi!</button></a>
             </div>
         </div>
@@ -155,9 +155,9 @@
                 </div>
                 <div id="courses">
                     <div class="tab">
-                        <button class="tablinks active" onclick="openTab(event, 'uci')">UCI</button>
-                        <button class="tablinks" onclick="openTab(event, 'ku')">KU</button>
-                        <button class="tablinks" onclick="openTab(event, 'srjc')">SRJC</button>
+                        <button class="tablinks active" onclick="openTab(event, 'uci', 'horizontal')">UCI</button>
+                        <button class="tablinks" onclick="openTab(event, 'ku', 'horizontal')">KU</button>
+                        <button class="tablinks" onclick="openTab(event, 'srjc', 'horizontal')">SRJC</button>
                     </div>
                     <div id="uci" class="tabcontent default-focus" style="display: block; opacity: 1; position: relative;">
                         <h3 class="school-name">University of California, Irvine</h3>
@@ -276,12 +276,12 @@
                 <div id="work-experience">
                     <div class="vertical-tab">
                         <button class="verticaltablinks active"
-                            onclick="openVerticalTab(event, 'General-Motors')"
-                            style=" border-top-left-radius: 10px;">General Motors</button>
+                            onclick="openTab(event, 'General-Motors', 'vertical')"
+                            style="border-top-left-radius: 10px;">General Motors</button>
                         <button class="verticaltablinks"
-                            onclick="openVerticalTab(event, 'Micro-Vu')">Micro-Vu</button>
+                            onclick="openTab(event, 'Micro-Vu', 'vertical')">Micro-Vu</button>
                         <button class="verticaltablinks" 
-                            onclick="openVerticalTab(event, 'UC-Irvine')">UC Irvine</button>
+                            onclick="openTab(event, 'UC-Irvine', 'vertical')">UC Irvine</button>
                     </div>
                     <div id="General-Motors" class="verticaltabcontent default-focus" style="display: block; opacity: 1; position: relative;">
                         <h3>Software Engineering Intern <a target="_blank" href="https://www.gm.com/" class="tertiary-colored">@ General Motors</a></h3>
@@ -403,49 +403,32 @@
             });
         });
 
-        var defaultFocusElement = document.getElementsByClassName('default-focus');
-        defaultFocusElement.focus();
-
-        function openTab(evt, id) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
+        function openTab(evt, id, type) {
+            var i, tabcontent, tablinks, hgt;
+            if (type == "horizontal"){
+                tabcontent = document.getElementsByClassName("tabcontent");
+                tablinks = document.getElementsByClassName("tablinks");
+                hgt = "75%";
+            } else if (type == "vertical"){
+                tabcontent = document.getElementsByClassName("verticaltabcontent");
+                tablinks = document.getElementsByClassName("verticaltablinks");
+                hgt = "87.5%";
+            }
 
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.position = "absolute";
                 tabcontent[i].style.opacity = "0";
+                tabcontent[i].style.height = "0";
+                tabcontent[i].style.position = "absolute";
                 tabcontent[i].style.transform = "translateY(-3px)";
             }
 
-            tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active");
             }
 
             var selectedTab = document.getElementById(id);
+            selectedTab.style.height = hgt;
             selectedTab.style.position = "relative";
-            selectedTab.style.display = "block";
-            selectedTab.style.opacity = "1";
-            selectedTab.style.transform = "translateY(0px)";
-            selectedTab.style.transition = "opacity 0.5s ease-in, transform 0.8s ease-in-out";
-            
-            evt.currentTarget.classList.add("active");
-        }
-
-        function openVerticalTab(evt, id) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("verticaltabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.position = "absolute";
-                tabcontent[i].style.opacity = "0";
-                tabcontent[i].style.transform = "translateY(-3px)";
-            }
-            tablinks = document.getElementsByClassName("verticaltablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            var selectedTab = document.getElementById(id);
-            selectedTab.style.position = "relative";
-            selectedTab.style.display = "block";
             selectedTab.style.opacity = "1";
             selectedTab.style.transform = "translateY(0px)";
             selectedTab.style.transition = "opacity 0.5s ease-in, transform 0.8s ease-in-out";
