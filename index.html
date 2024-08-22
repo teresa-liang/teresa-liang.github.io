@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <title>Teresa's Website</title>
     <meta charset="utf-8">
@@ -58,9 +59,12 @@
                 <h2 id="name">Teresa Liang.</h2>
             </div>
             <div>
-                <p id="description">With a Bachelor's degree in Computer Science with a focus in Artificial Intelligence and a minor in Statistics from UC Irvine, 
-                    I am now pursuing a Master of Engineering in Translational Medicine at UCLA to explore the intersection of technology 
-                    and healthcare. I am passionate about front-end and back-end development, biotechnology, artificial intelligence, 
+                <p id="description">With a Bachelor's degree in Computer Science with a focus in Artificial Intelligence
+                    and a minor in Statistics from UC Irvine,
+                    I am now pursuing a Master of Engineering in Translational Medicine at UCLA to explore the
+                    intersection of technology
+                    and healthcare. I am passionate about front-end and back-end development, biotechnology, artificial
+                    intelligence,
                     machine learning, and everything in between.
                 </p>
             </div>
@@ -93,17 +97,25 @@
                         <span class="code-white">= </span>
                         <span class="code-orange">'Petaluma, CA'</span>
                         <br>
-                        <span class="code-light-blue">self.school </span>
+                        <span class="code-light-blue">self.grad </span>
                         <span class="code-white">= </span>
-                        <span class="code-orange">'UC Irvine'</span>
+                        <span class="code-orange">'UCLA'</span>
+                        <br>
+                        <span class="code-light-blue">self.master </span>
+                        <span class="code-white">= </span>
+                        <span class="code-orange">'Translational Medicine, MEng'</span>
                         <br>
                         <span class="code-light-blue">self.expected_graduation</span>
                         <span class="code-white">= </span>
-                        <span class="code-orange">'June 2024'</span>
+                        <span class="code-orange">'Sept 2025'</span>
+                        <br>
+                        <span class="code-light-blue">self.undergrad </span>
+                        <span class="code-white">= </span>
+                        <span class="code-orange">'UC Irvine'</span>
                         <br>
                         <span class="code-light-blue">self.major </span>
                         <span class="code-white">= </span>
-                        <span class="code-orange">'Computer Science, B.S.'</span>
+                        <span class="code-orange">'Computer Science, BS'</span>
                         <br>
                         <span class="code-light-blue">self.minor </span>
                         <span class="code-white">= </span>
@@ -148,20 +160,22 @@
             <h2><span class="primary-colored">02. </span><span class="secondary-colored">Education</span></h2>
             <div class="section-content">
                 <div id="uci-section">
-                    <h2 id="uci-name">University of California, Irvine</h2>
-                    <h3 class="quaternary-colored">B.S. - Computer Science</h3>
-                    <span class="secondary-colored">Expected Gradution: June 2024</span>
-                    <img src="assets\uci_anteater.png" id="uci-anteater">
+                    <h2 id="uci-name">University of California, Los Angeles</h2>
+                    <h3 class="quaternary-colored">M.Eng. - Translational Medicine</h3>
+                    <span class="secondary-colored">Expected Gradution: September 2025</span>
+                    <img src="assets\ucla_bruin.png" id="ucla-bruin">
                 </div>
                 <div id="courses">
                     <div class="tab">
-                        <button class="tablinks active" onclick="openTab(event, 'uci', 'horizontal')">UCI</button>
+                        <button class="tablinks active" onclick="openTab(event, 'ucla', 'horizontal')">UCLA</button>
+                        <button class="tablinks" onclick="openTab(event, 'uci', 'horizontal')">UCI</button>
                         <button class="tablinks" onclick="openTab(event, 'ku', 'horizontal')">KU</button>
                         <button class="tablinks" onclick="openTab(event, 'srjc', 'horizontal')">SRJC</button>
                     </div>
-                    <div id="uci" class="tabcontent default-focus" style="display: block; opacity: 1; position: relative;">
-                        <h3 class="school-name">University of California, Irvine</h3>
-                            <h5 class="range">September 2021 - present</h5>
+                    <div id="ucla" class="tabcontent default-focus"
+                        style="display: block; opacity: 1; position: relative;">
+                        <h3 class="school-name">University of California, Los Angeles</h3>
+                        <h5 class="range">September 2024 - Present</h5>
                         <div>
                             <h4>Relevant Coursework</h4>
                         </div>
@@ -169,18 +183,46 @@
                             <div class="current-course">in progress*</div>
                         </div>
                         <ul>
-                            <course-item course-name="CS 125 - Next Generation Search Systems&lt;b>*&lt;/b>" current-status="true"></course-item>
-                            <course-item course-name="CS 175 - Project in AI&lt;b>*&lt;/b>" current-status="true"></course-item>
+                            <course-item course-name="CS 230 - Software Engineering&lt;b>*&lt;/b>"
+                                current-status="true"></course-item>
+                            <course-item
+                                course-name="BIOENGR 275 - Machine Learning and Data-Driven Modeling in Bioengineering&lt;b>*&lt;/b>"
+                                current-status="true"></course-item>
+                            <course-item
+                                course-name="BIOENGR M209 - Signal and Image Processing for Biomedicine&lt;b>*&lt;/b>"
+                                current-status="true"></course-item>
+                        </ul>
+                        <h4>Engineering Professional Development</h4>
+                        <ul>
+                            <course-item
+                                course-name="ENGR 214 - Management Communication&lt;b>*&lt;/b>"
+                                current-status="true"></course-item>
+                        </ul>
+                    </div>
+                    <div id="uci" class="tabcontent">
+                        <h3 class="school-name">University of California, Irvine</h3>
+                        <h5 class="range">September 2021 - June 2024</h5>
+                        <div>
+                            <h4>Relevant Coursework</h4>
+                        </div>
+                        <ul>
+                            <course-item course-name="ICS 53 - Principles in System Design"></course-item>
+                            <course-item course-name="CS 142A - Compilers & Interpreters"></course-item>
+                            <course-item course-name="CS 145 - Embedded Software"></course-item>
+                            <course-item course-name="CS 125 - Next Generation Search Systems"></course-item>
+                            <course-item course-name="CS 175 - Project in AI"></course-item>
                             <course-item course-name="CS 121 - Information Retrieval"></course-item>
                             <course-item course-name="CS 141 - Concepts in Programming Languages I"></course-item>
                             <course-item course-name="CS 143A - Principles of Operating Systems"></course-item>
                             <course-item course-name="CS 122A - Introduction to Data Management"></course-item>
                             <course-item course-name="CS 161 - Design & Analysis of Algorithms"></course-item>
-                            <course-item course-name="ICS 46 - Data Structure Implementation and Analysis"></course-item>
+                            <course-item
+                                course-name="ICS 46 - Data Structure Implementation and Analysis"></course-item>
                             <course-item course-name="CS 177 - Applications of Probability in CS"></course-item>
                             <course-item course-name="CS 178 - Machine Learning and Data-Mining"></course-item>
                             <course-item course-name="ICS 51 - Introduction to Computer Organization"></course-item>
-                            <course-item course-name="ICS 139W - Critical Writing on Information Technology"></course-item>
+                            <course-item
+                                course-name="ICS 139W - Critical Writing on Information Technology"></course-item>
                             <course-item course-name="IN4MATX 43 - Introduction to Software Engineering"></course-item>
                             <course-item course-name="ICS 6N - Computational Linear Algebra"></course-item>
                             <course-item course-name="ICS 6B - Boolean Algebra & Logic"></course-item>
@@ -190,12 +232,18 @@
                         </ul>
                         <h4>Statistics</h4>
                         <ul>
-                            <course-item course-name="STATS 111 - Statistical Methods for Data Analysis II&lt;b>*&lt;/b>" current-status="true"></course-item>
-                            <course-item course-name="STATS 110 - Statistical Methods for Data Analysis I"></course-item>
-                            <course-item course-name="STATS 120C - Introduction to Probability and Statistics III"></course-item>
-                            <course-item course-name="STATS 120B - Introduction to Probability and Statistics II"></course-item>
-                            <course-item course-name="STATS 120A - Introduction to Probability and Statistics I"></course-item>
-                            <course-item course-name="STATS 67 - Introduction to Probability and Statistics for Computer Science"></course-item>
+                            <course-item
+                                course-name="STATS 111 - Statistical Methods for Data Analysis II"></course-item>
+                            <course-item
+                                course-name="STATS 110 - Statistical Methods for Data Analysis I"></course-item>
+                            <course-item
+                                course-name="STATS 120C - Introduction to Probability and Statistics III"></course-item>
+                            <course-item
+                                course-name="STATS 120B - Introduction to Probability and Statistics II"></course-item>
+                            <course-item
+                                course-name="STATS 120A - Introduction to Probability and Statistics I"></course-item>
+                            <course-item
+                                course-name="STATS 67 - Introduction to Probability and Statistics for Computer Science"></course-item>
                         </ul>
                         <h4>Other</h4>
                         <ul>
@@ -209,7 +257,8 @@
                             <h4>Relevant Coursework</h4>
                         </div>
                         <ul>
-                            <course-item course-name="ISC 42100 - Introduction to Artificial Intelligence"></course-item>
+                            <course-item
+                                course-name="ISC 42100 - Introduction to Artificial Intelligence"></course-item>
                         </ul>
                         <h4>Other</h4>
                         <ul>
@@ -228,7 +277,8 @@
                             <course-item course-name="CS 50C - Web Development III"></course-item>
                             <course-item course-name="CS 50B - Web Development II"></course-item>
                             <course-item course-name="CS 50A - Web Development I"></course-item>
-                            <course-item course-name="CS 10A - Introduction to Programming Concepts and Methodologies"></course-item>
+                            <course-item
+                                course-name="CS 10A - Introduction to Programming Concepts and Methodologies"></course-item>
                             <course-item course-name="MATH 4 - Discrete Mathematics"></course-item>
                         </ul>
                         <h4>Statistics</h4>
@@ -275,40 +325,60 @@
                 </div>
                 <div id="work-experience">
                     <div class="vertical-tab">
-                        <button class="verticaltablinks active"
-                            onclick="openTab(event, 'General-Motors', 'vertical')"
-                            style="border-top-left-radius: 10px;">General Motors</button>
-                        <button class="verticaltablinks"
-                            onclick="openTab(event, 'Micro-Vu', 'vertical')">Micro-Vu</button>
-                        <button class="verticaltablinks" 
-                            onclick="openTab(event, 'UC-Irvine', 'vertical')">UC Irvine</button>
+                        <button class="verticaltablinks active" onclick="openTab(event, 'Bessy', 'vertical')"
+                            style="border-top-left-radius: 10px;">Bessy</button>
+                        <button class="verticaltablinks" onclick="openTab(event, 'General-Motors', 'vertical')">General Motors</button>
+                        <button class="verticaltablinks" onclick="openTab(event, 'Micro-Vu', 'vertical')">Micro-Vu</button>
+                        <button class="verticaltablinks" onclick="openTab(event, 'UC-Irvine', 'vertical')">UC Irvine</button>
                     </div>
-                    <div id="General-Motors" class="verticaltabcontent default-focus" style="display: block; opacity: 1; position: relative;">
-                        <h3>Software Engineering Intern <a target="_blank" href="https://www.gm.com/" class="tertiary-colored">@ General Motors</a></h3>
+                    <div id="Bessy" class="verticaltabcontent default-focus"
+                        style="display: block; opacity: 1; position: relative;">
+                        <h3>Frontend Devloper <span class="tertiary-colored">@Bessy</span></h3>
+                        <h5 class="range">June 2024 - Present</h5>
+                        <ul>
+                            <li>
+                                <flower-bullet></flower-bullet>
+                                Developed and integrated multiple frontend components and modules using React Native.
+                            </li>
+                            <li>
+                                <flower-bullet></flower-bullet>
+                                Collaborated with design teams to translate UI/UX designs into functional code.
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="General-Motors" class="verticaltabcontent">
+                        <h3>Software Engineering Intern <a target="_blank" href="https://www.gm.com/"
+                                class="tertiary-colored">@General Motors</a></h3>
                         <h5 class="range">June 2023 - September 2023</h5>
                         <ul>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Collaborated closely with the team to migrate the development workflow from Gerrit to GitHub using tools such as Jira, Jenkins, and Artifactory.
+                                Collaborated closely with the team to migrate the development workflow from Gerrit to
+                                GitHub using tools such as Jira, Jenkins, and Artifactory.
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Integrated comprehensive code testing and static analysis measures for GitHub, ensuring high-quality code submissions.
+                                Integrated comprehensive code testing and static analysis measures for GitHub, ensuring
+                                high-quality code submissions.
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Developed robust bash scripts to automate the release generation and delta packaging process, increasing the efficiency of managing and deploying GM’s software to end-users.
+                                Developed robust bash scripts to automate the release generation and delta packaging
+                                process, increasing the efficiency of managing and deploying GM’s software to end-users.
                             </li>
                         </ul>
                     </div>
                     <div id="Micro-Vu" class="verticaltabcontent">
-                        <h3>Electronics Intern <a target="_blank" href="https://www.microvu.com/" class="tertiary-colored">@ Micro-Vu</a></h3>
+                        <h3>Electronics Intern <a target="_blank" href="https://www.microvu.com/"
+                                class="tertiary-colored">@Micro-Vu</a></h3>
                         <h5 class="range">September 2020 - September 2022</h5>
                         <ul>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Developed a React Native app and Flask API from scratch to help 20+ employees easily keep track of item
-                                inventory, search up item details, make item transfers, and get item pick lists for work orders, improving production rates.
+                                Developed a React Native app and Flask API from scratch to help 20+ employees easily
+                                keep track of item
+                                inventory, search up item details, make item transfers, and get item pick lists for work
+                                orders, improving production rates.
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
@@ -316,33 +386,42 @@
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Migrated Visual FoxPro scripts into Python and automated the process of sending these reports as emails.
+                                Migrated Visual FoxPro scripts into Python and automated the process of sending these
+                                reports as emails.
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Guided new interns on manufacturing, assembling, and testing various sub-components for precision measurement equipment.
+                                Guided new interns on manufacturing, assembling, and testing various sub-components for
+                                precision measurement equipment.
                             </li>
                         </ul>
                     </div>
                     <div id="UC-Irvine" class="verticaltabcontent">
-                        <h3>Projects Committee Member of <a target="_blank" href="https://studentcouncil.ics.uci.edu/" class="tertiary-colored">ICSSC</a></h3>
+                        <h3>Projects Committee Member of <a target="_blank" href="https://studentcouncil.ics.uci.edu/"
+                                class="tertiary-colored">ICSSC</a></h3>
                         <h5 class="range">November 2022 - Present</h5>
                         <ul>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                <span>Used React to create new features <span><a class="important-link" target="_blank" href="https://antalmanac.com/">AntAlamanac</a></span>, a course exploration and scheduling tool for 46,000 UCI Anteaters, which includes course enrollment notifications, and past course enrollment graphs.</span>
+                                <span>Used React to create new features <span><a class="important-link" target="_blank"
+                                            href="https://antalmanac.com/">AntAlamanac</a></span>, a course exploration
+                                    and scheduling tool for 46,000 UCI Anteaters, which includes course enrollment
+                                    notifications, and past course enrollment graphs.</span>
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Collaborated with a team of 10 by conducting code reviews, suggesting feature enhancements, and contributing to weekly stand-up meetings.
+                                Collaborated with a team of 10 by conducting code reviews, suggesting feature
+                                enhancements, and contributing to weekly stand-up meetings.
                             </li>
                         </ul>
-                        <h3>Social Relations Coordinator of <a target="_blank" href="https://acm-uci.org/" class="tertiary-colored">ACM</a></h3>
+                        <h3>Social Relations Coordinator of <a target="_blank" href="https://acm-uci.org/"
+                                class="tertiary-colored">ACM</a></h3>
                         <h5 class="range">December 2022 - Present</h5>
                         <ul>
                             <li>
                                 <flower-bullet></flower-bullet>
-                                Organized club social events to strengthen interpersonal relationships within the organization.
+                                Organized club social events to strengthen interpersonal relationships within the
+                                organization.
                             </li>
                             <li>
                                 <flower-bullet></flower-bullet>
@@ -361,23 +440,17 @@
             <h2><span class="primary-colored">04. </span><span class="secondary-colored">Projects</span></h2>
             <div id="project-content">
                 <ul>
-                    <project-card
-                        website-link="https://teresa-liang.github.io/"
+                    <project-card website-link="https://teresa-liang.github.io/"
                         github-link="https://github.com/teresa-liang/teresa-liang.github.io"
                         project-name="Personal Website"
                         project-description="Created a website from pure &lt;b>HTML/CSS&lt;/b> to showcase a little more about me!"
                         languages="HTML,CSS,Javascript">
                     </project-card>
-                    <project-card
-                        github-link="https://github.com/beepo34/petr-selectr"
-                        project-name="PetrSelectr"
+                    <project-card github-link="https://github.com/beepo34/petr-selectr" project-name="PetrSelectr"
                         project-description="Collaborated with a partner to build a &lt;b>web application&lt;/b> that helps UCI
-                        students in the school of ICS plan their classes."
-                        languages="HTML,CSS,Javascript,GraphQL">
+                        students in the school of ICS plan their classes." languages="HTML,CSS,Javascript,GraphQL">
                     </project-card>
-                    <project-card
-                        github-link="https://github.com/teresa-liang/memorvine"
-                        project-name="Memorvine"
+                    <project-card github-link="https://github.com/teresa-liang/memorvine" project-name="Memorvine"
                         project-description="Developing a &lt;b>mobile app&lt;/b> that helps people memorize Bible verses."
                         languages="Typescript,Javascript">
                     </project-card>
@@ -389,7 +462,7 @@
     <script>
         // Function to handle smooth scroll behavior when clicking links within <nav>
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
                 const targetId = this.getAttribute('href');
@@ -405,11 +478,11 @@
 
         function openTab(evt, id, type) {
             var i, tabcontent, tablinks, hgt;
-            if (type == "horizontal"){
+            if (type == "horizontal") {
                 tabcontent = document.getElementsByClassName("tabcontent");
                 tablinks = document.getElementsByClassName("tablinks");
                 hgt = "75%";
-            } else if (type == "vertical"){
+            } else if (type == "vertical") {
                 tabcontent = document.getElementsByClassName("verticaltabcontent");
                 tablinks = document.getElementsByClassName("verticaltablinks");
                 hgt = "87.5%";
@@ -432,7 +505,7 @@
             selectedTab.style.opacity = "1";
             selectedTab.style.transform = "translateY(0px)";
             selectedTab.style.transition = "opacity 0.5s ease-in, transform 0.8s ease-in-out";
-            
+
             evt.currentTarget.classList.add("active");
         }
     </script>
